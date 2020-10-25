@@ -8,6 +8,12 @@ var server = app.listen(port, function () {
   console.log("listening for requests on port ", port);
 });
 
+app.get("/", function (req, res) {
+  return res.json({
+    hi: "hi",
+  });
+});
+
 // Socket setup
 var io = socket(server);
 
